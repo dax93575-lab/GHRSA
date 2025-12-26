@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل النبات - النباتات المثمرة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/fruit.css">
+    <link rel="stylesheet" href="css/plant-details.css">
+    <link rel="icon" href="images/leaf.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i><span>غرسة</span></a>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="plantType.html">أنواع النباتات</a>
+                <a href="care.html">العناية</a>
+                <a href="index.html#about">من نحن</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="plant-details-page">
+        <div class="container">
+
+            <div class="plant-title-section">
+                <h1>شجرة الليمون</h1>
+                <p class="subtitle">Citrus limon</p>
+            </div>
+
+            <div class="plant-split-layout">
+                <div class="plant-image-container">
+                    <img src="images/fruit_veggies.png" alt="شجرة الليمون" class="main-plant-image">
+                </div>
+
+                <div class="plant-requirements">
+                    <h2>احتياجات النبات</h2>
+                    <div class="requirement-item sun-item">
+                        <div class="req-label"><i class="fas fa-sun"></i> <span>الإضاءة</span></div>
+                        <div class="slider-container">
+                            <input type="range" class="req-slider sun-slider" value="100" disabled>
+                            <span class="value-text">كاملة</span>
+                        </div>
+                        <p class="req-note">شمس كاملة، لا تقل عن 8 ساعات.</p>
+                    </div>
+
+                    <div class="requirement-item water-item">
+                        <div class="req-label"><i class="fas fa-tint"></i> <span>الماء</span></div>
+                        <div class="slider-container">
+                            <input type="range" class="req-slider water-slider" value="70" disabled>
+                            <span class="value-text">عالية</span>
+                        </div>
+                        <p class="req-note">ري عميق ومنتظم للحصول على ثمار عصيرية.</p>
+                    </div>
+
+                    <div class="requirement-item soil-item">
+                        <div class="req-label"><i class="fas fa-layer-group"></i> <span>التربة</span></div>
+                        <div class="slider-container">
+                            <input type="range" class="req-slider soil-slider" value="75" disabled>
+                            <span class="value-text">خصبة</span>
+                        </div>
+                        <p class="req-note">تربة غنية جيدة التصريف.</p>
+                    </div>
+
+                    <div class="requirement-item fertilizer-item">
+                        <div class="req-label"><i class="fas fa-seedling"></i> <span>السماد</span></div>
+                        <div class="slider-container">
+                            <input type="range" class="req-slider fertilizer-slider" value="85" disabled>
+                            <span class="value-text">عالي</span>
+                        </div>
+                        <p class="req-note">تسميد منتظم لثمار أفضل.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plant-description">
+                <h2>عن النبات والعناية به</h2>
+                <div class="desc-content">
+                    <p>شجرة الليمون إضافة رائعة لأي حديقة، حيث توفر جمالاً دائماً وثماراً مفيدة غنية بفيتامين C.</p>
+                    <p>تحتاج إلى مكان مشمس ومحمي من الرياح القوية.</p>
+                </div>
+            </div>
+
+            <div class="related-plants">
+                <h2 class="section-title">نباتات من نفس النوع</h2>
+                <div class="related-plants-scroll">
+
+                    <!-- Card 1: الزيتون -->
+                    <div class="flip-card" data-name="الزيتون">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/fruit_الزيتون.png" alt="الزيتون">
+                                <div class="front-content">
+                                    <h3>الزيتون</h3>
+                                    <a href="fruit-details.html?plant=الزيتون" class="mobile-card-btn">تفاصيل أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>الزيتون</h3>
+                                <p>شجرة معمرة مباركة تتحمل الجفاف.</p>
+                                <a href="fruit-details.html?plant=الزيتون" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: النخيل -->
+                    <div class="flip-card" data-name="النخيل">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/fruit_النخيل.png" alt="النخيل">
+                                <div class="front-content">
+                                    <h3>النخيل</h3>
+                                    <a href="fruit-details.html?plant=النخيل" class="mobile-card-btn">تفاصيل أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>النخيل</h3>
+                                <p>شجرة مثمرة تتحمل الحرارة والملوحة.</p>
+                                <a href="fruit-details.html?plant=النخيل" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: التين -->
+                    <div class="flip-card" data-name="التين">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/fruit_التين.png" alt="التين">
+                                <div class="front-content">
+                                    <h3>التين</h3>
+                                    <a href="fruit-details.html?plant=التين" class="mobile-card-btn">تفاصيل أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>التين</h3>
+                                <p>شجرة مثمرة سريعة النمو بظلال وفيرة.</p>
+                                <a href="fruit-details.html?plant=التين" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: الرمان -->
+                    <div class="flip-card" data-name="الرمان">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/fruit_الرمان.png" alt="الرمان">
+                                <div class="front-content">
+                                    <h3>الرمان</h3>
+                                    <a href="fruit-details.html?plant=الرمان" class="mobile-card-btn">تفاصيل أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>الرمان</h3>
+                                <p>شجرة مثمرة صيفية بزهور حمراء خلابة.</p>
+                                <a href="fruit-details.html?plant=الرمان" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: الليمون -->
+                    <div class="flip-card" data-name="الليمون">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/fruit_الليمون.png" alt="الليمون">
+                                <div class="front-content">
+                                    <h3>الليمون</h3>
+                                    <a href="fruit-details.html?plant=الليمون" class="mobile-card-btn">تفاصيل أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>الليمون</h3>
+                                <p>شجرة مثمرة دائمة الخضرة بزهور عطرية.</p>
+                                <a href="fruit-details.html?plant=الليمون" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: العنب -->
+                    <div class="flip-card" data-name="العنب">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/fruit_العنب.png" alt="العنب">
+                                <div class="front-content">
+                                    <h3>العنب</h3>
+                                    <a href="fruit-details.html?plant=العنب" class="mobile-card-btn">تفاصيل أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>العنب</h3>
+                                <p>نبات متسلق مثمر بظلال واسعة.</p>
+                                <a href="fruit-details.html?plant=العنب" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>غرسة</h3>
+                <p>موقع عربي يهدف لنشر المعرفة حول عالم النباتات.</p>
+                <p class="copyright">© 2025 غرسة. جميع الحقوق محفوظة.</p>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> gharsa@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +218 (92-1) 123_456</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/plant-details.js"></script>
+</body>
+
+</html>

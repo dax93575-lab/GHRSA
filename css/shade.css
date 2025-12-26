@@ -1,0 +1,75 @@
+/* =================================================
+   SHADE PAGE THEME (النباتات المحبة للظل)
+================================================= */
+
+/* --- 1. SEARCH SECTION OVERRIDES (تخصيص البحث) --- */
+.search-wrapper {
+    box-shadow: 0 10px 30px rgba(38, 50, 56, 0.15);
+}
+
+.search-box input {
+    color: #263238;
+}
+
+.search-box button {
+    background: #546e7a;
+}
+
+.search-box button:hover {
+    background: #37474f;
+}
+
+/* --- 2. FLIP CARDS THEME (تخصيص البطاقات) --- */
+.shade-cards {
+    padding: 80px 0;
+}
+
+.front-content {
+    background: linear-gradient(to top, rgba(38, 50, 56, 0.8), transparent);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #cfd8dc, #b0bec5);
+    color: #263238;
+    border: 2px solid #90a4ae;
+}
+
+.flip-card-back h3,
+.flip-card-back p {
+    color: #263238;
+}
+
+.card-btn {
+    background: #37474f;
+}
+
+.card-btn:hover {
+    background: #263238;
+}
+
+/* --- 3. FOOTER THEME (تخصيص الفوتر للمظهر الغابي) --- */
+.footer {
+    background: linear-gradient(135deg, #546e7a, #263238) !important;
+    border-top: 4px solid #90a4ae;
+}
+
+.footer-col a:hover,
+.contact-list i,
+.social-icons a:hover {
+    color: #eceff1 !important;
+    /* Light blue-grey color */
+}
+
+/* --- 4. THEME VARIABLES (متغيرات المظهر) --- */
+:root {
+    --green-dark: #263238;
+    /* Dark Blue-Grey */
+    --green-main: #8e44ad;
+    /* Purple Accent */
+
+    --card-back-bg: linear-gradient(135deg, #cfd8dc, #b0bec5);
+    --card-text: #263238;
+    --card-border: #b0bec5;
+    --card-btn-bg: #37474f;
+    --card-btn-hover: #455a64;
+}

@@ -1,0 +1,74 @@
+@import url('../home.css');
+
+/* Hero is handled by commen.css */
+
+/* =================================================
+   INDOOR PAGE THEME (النباتات المنزلية)
+================================================= */
+
+/* --- 1. SEARCH SECTION OVERRIDES (تخصيص البحث) --- */
+.search-wrapper {
+    box-shadow: 0 10px 30px rgba(0, 121, 107, 0.15);
+}
+
+.search-box input {
+    color: #00695c;
+}
+
+.search-box button {
+    background: #00897b;
+}
+
+.search-box button:hover {
+    background: #00695c;
+}
+
+/* --- 2. FLIP CARDS THEME (تخصيص البطاقات) --- */
+.indoor-cards {
+    padding: 80px 0;
+}
+
+.front-content {
+    background: linear-gradient(to top, rgba(0, 77, 64, 0.8), transparent);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #b2dfdb, #80cbc4);
+    color: #004d40;
+    border: 2px solid #80cbc4;
+}
+
+.flip-card-back h3 {
+    color: #004d40;
+}
+
+.card-btn {
+    background: #00695c;
+}
+
+/* --- 3. FOOTER THEME (تخصيص الفوتر للمظهر المنزلي) --- */
+.footer {
+    background: linear-gradient(135deg, #00796b, #004d40) !important;
+    border-top: 4px solid #80cbc4;
+}
+
+.footer-col a:hover,
+.contact-list i,
+.social-icons a:hover {
+    color: #e0f2f1 !important;
+    /* Light teal color */
+}
+
+/* --- 4. THEME VARIABLES (متغيرات المظهر) --- */
+:root {
+    --green-dark: #1e8449;
+    /* Dark Teal-ish Green */
+    --green-main: #27ae60;
+    /* Main Green */
+
+    --card-back-bg: linear-gradient(135deg, #b2dfdb, #80cbc4);
+    --card-text: #004d40;
+    --card-border: #80cbc4;
+    --card-btn-bg: #00695c;
+    --card-btn-hover: #00897b;
+}

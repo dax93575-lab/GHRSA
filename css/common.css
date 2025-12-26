@@ -1,0 +1,747 @@
+/* =================================================
+   1. VARIABLES & BASE SETUP (المتغيرات والإعدادات الأساسية)
+   - تم توحيد المتغيرات من جميع الصفحات.
+================================================= */
+:root {
+  --green-dark: #1b4d3e;
+  --green-main: #4fa48f;
+  --green-light: #a8d5c2;
+  --bg: #f7f9f6;
+  --bg-card: #fdfaf6;
+  --white: #ffffff;
+  --text: #2e3a36;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  --shadow-hover: 0 18px 45px rgba(0, 0, 0, 0.12);
+  --transition: 0.4s ease;
+  --morph-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* =================================================
+   2. RESET & GLOBAL STYLES (تصفير الأنماط والأنماط العامة)
+   - أنماط أساسية تطبق على كل الصفحات.
+================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =================================================
+   3. UNIFIED HEADER (الهيدر الموحّد)
+   - تم اعتماد تصميم الهيدر الشفاف من الصفحة الرئيسية.
+   - تم حل مشكلة اختفاء القائمة في الشاشات الصغيرة.
+================================================= */
+.main-header {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.75);
+  /* شفافية موحدة */
+  backdrop-filter: blur(12px);
+  /* تأثير الضبابية */
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  z-index: 1000;
+  transition: top 0.3s ease;
+  /* حركة عند السكرول */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 28px;
+  flex-wrap: wrap;
+  /* *** السماح للعناصر بالالتفاف في الشاشات الضيقة *** */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--green-dark);
+}
+
+/* --- Navigation Menu (القائمة) --- */
+nav {
+  text-align: center;
+}
+
+nav a {
+  margin: 5px 15px;
+  /* تعديل الـ margin ليتناسب مع التفاف العناصر */
+  padding: 5px 8px;
+  font-weight: 600;
+  position: relative;
+  color: var(--text);
+  transition: color 0.3s ease;
+  display: inline-block;
+  /* لضمان تطبيق الـ margin بشكل صحيح */
+}
+
+nav a:hover {
+  color: var(--green-dark);
+}
+
+/* Animation of floating leaves (حركة أوراق الشجر) */
+nav a::before,
+nav a::after {
+  content: '🌿';
+  position: absolute;
+  color: var(--green-main);
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav a::before {
+  top: -5px;
+  right: -10px;
+  transform: scale(0) rotate(20deg);
+}
+
+nav a::after {
+  bottom: -5px;
+  left: -10px;
+  transform: scale(0) rotate(-160deg);
+  transition-delay: 0.1s;
+}
+
+nav a:hover::before,
+nav a:hover::after,
+nav a.active::before,
+nav a.active::after {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* =================================================
+   4. BUTTONS SYSTEM (نظام الأزرار الموحد)
+================================================= */
+.btn {
+  display: inline-block;
+  padding: 14px 40px;
+  margin: 0 5px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn.primary {
+  background: var(--green-main);
+  color: white;
+}
+
+.btn.primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(45deg, var(--green-light), var(--green-main));
+  z-index: -1;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.btn.primary:hover::before {
+  opacity: 1;
+}
+
+.btn.primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(168, 213, 194, 0.6);
+}
+
+.btn.outline {
+  border-color: var(--white);
+  color: var(--white);
+  backdrop-filter: blur(2px);
+}
+
+.btn.outline:hover {
+  color: var(--green-dark);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: transparent;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* =================================================
+   5. UNIFIED HERO SYSTEM (نظام هيرو موحد)
+================================================= */
+.hero-section {
+  position: relative;
+  min-height: 70vh;
+  /* Increased from 50vh */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 100px 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(27, 77, 62, 0.75), rgba(27, 77, 62, 0.45));
+  z-index: 1;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  
+}
+
+
+.hero-section h1 {
+  font-size: 5rem;
+  /* Increased from 4rem */
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.1;
+  text-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.hero-section p {
+  font-size: 1.6rem;
+  /* Increased from 1.4rem */
+  opacity: 0.98;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  line-height: 1.6;
+}
+
+.hero-glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 40px;
+  /* More rounded */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+  padding: 70px 50px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* =================================================
+   6. SEARCH SYSTEM (نظام البحث المشترك)
+================================================= */
+.search-section {
+  padding: 40px 0;
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.search-wrapper {
+  background: white;
+  padding: 15px;
+  border-radius: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 15px 25px;
+  border: none;
+  font-size: 1.1rem;
+  font-family: inherit;
+  outline: none;
+  color: var(--text);
+  background: transparent;
+}
+
+.search-box button {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--green-main);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: var(--transition);
+}
+
+/* =================================================
+   7. FLIP CARDS SYSTEM (نظام البطاقات القلابة الموحد)
+================================================= */
+.flip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 20px 0;
+}
+
+.flip-card {
+  background: transparent;
+  perspective: 1000px;
+  height: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flip-card-front {
+  background: white;
+}
+
+.flip-card-front img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.flip-card:hover .flip-card-front img {
+  transform: scale(1.1);
+}
+
+.front-content {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+.front-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.flip-card-back {
+  background: var(--bg-card);
+  color: var(--text);
+  transform: rotateY(180deg);
+  padding: 30px;
+  justify-content: center;
+}
+
+.flip-card-back h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.flip-card-back p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.card-btn {
+  padding: 12px 30px;
+  background: var(--green-dark);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+/* Mobile Visibility Handling */
+.mobile-card-btn {
+  display: none;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: var(--green-dark);
+  color: white;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* =================================================
+   8. UNIFIED FOOTER (الفوتر الموحّد)
+   - تم دمج جميع أنماط الفوتر في تصميم واحد شامل.
+================================================= */
+.footer {
+  background: var(--green-dark);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 40px 0 20px;
+  margin-top: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.footer-col a,
+.footer-col li {
+  display: block;
+  margin-top: 12px;
+  opacity: 0.8;
+  transition: var(--transition);
+  list-style: none;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: var(--green-light);
+  transform: translateX(-5px);
+}
+
+.contact-list i {
+  margin-left: 10px;
+  color: var(--green-light);
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.4rem;
+  margin: 0 10px;
+}
+
+.social-icons a:hover {
+  color: var(--green-light);
+  transform: translateY(-5px) scale(1.2);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9em;
+  opacity: 0.7;
+  max-width: 1300px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* =================================================
+   COMMON COMPONENTS (العناصر المشتركة)
+   - أزرار، عناوين أقسام، وغيرها من العناصر المتكررة.
+================================================= */
+
+/* --- Section Titles --- */
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--green-dark);
+}
+
+/* =================================================
+   9. ABOUT SECTION STYLES (من نحن)
+================================================= */
+.about-section {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.timeline-section {
+  padding: 40px 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.timeline-item {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.timeline-item:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.content-card {
+  width: 500px;
+  max-width: 90%;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  border: 1px solid rgba(79, 164, 143, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:nth-child(odd) .content-card {
+  transform: translateX(20px);
+}
+
+.timeline-item:nth-child(even) .content-card {
+  transform: translateX(-20px);
+}
+
+.content-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 20px 45px rgba(27, 77, 62, 0.12);
+}
+
+.card-info h2 {
+  color: var(--green-dark);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.card-info p {
+  font-size: 1.1rem;
+  opacity: 1;
+  line-height: 1.7;
+  color: #555;
+  margin-top: 15px;
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--green-main);
+  margin-bottom: 20px;
+}
+
+.leaf-bg {
+  position: absolute;
+  color: var(--green-light);
+  opacity: 0.15;
+  font-size: 4rem;
+  pointer-events: none;
+
+}
+
+
+/* =================================================
+   10. RESPONSIVE DESIGN (التجاوب)
+================================================= */
+
+@media (max-width: 992px) {
+
+  /* General Layout */
+  .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .timeline-item:nth-child(odd) .content-card,
+  .timeline-item:nth-child(even) .content-card {
+    transform: translateX(0);
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* --- *** أهم تعديل: تعديل الهيدر ليتجاوب *** --- */
+  .header-content {
+    justify-content: center;
+    /* توسيط الشعار والقائمة */
+    gap: 10px 20px;
+    /* إضافة مسافات بين العناصر عند الالتفاف */
+  }
+
+  /*
+   * ملاحظة: تم حذف `nav { display: none; }`
+   * هذا الكود كان السبب في إخفاء القائمة. الآن، ستلتف الروابط إلى سطر جديد إذا لم يكن هناك مساحة كافية.
+   */
+
+  /* General font sizes and adjustments */
+  .section-title {
+    font-size: 2.2rem;
+  }
+nav a {
+    margin: 5px 8px;
+    /* تقليل المسافات أكثر */
+    font-size: 0.7rem;
+  }
+
+  .hero-section {
+    min-height: 60vh;
+    padding: 140px 20px 80px;
+  }
+
+  .hero-section h1 {
+  
+    font-size: 2.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1.2rem;
+  }
+
+  .hero-glass-card {
+    padding: 40px 20px;
+    border-radius: 25px;
+  }
+
+  .flip-card {
+    height: 350px;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+
+  .mobile-card-btn {
+    display: inline-block;
+  }
+
+  /* Make the entire front card clickable on mobile */
+  .flip-card-front {
+    position: relative;
+  }
+
+  .mobile-card-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .search-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.3rem;
+    /* تصغير حجم اللوقو قليلاً */
+  }
+
+  nav a {
+    margin: 5px 8px;
+    /* تقليل المسافات أكثر */
+    font-size: 0.5rem;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Buttons & Inputs Transitions --- */
+button,
+input[type="submit"] {
+  transition: all 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure social icons have transitions */
+.social-icons a {
+  transition: all 0.3s ease;
+}

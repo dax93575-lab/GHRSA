@@ -1,0 +1,74 @@
+/* =================================================
+   FLOWERING PAGE THEME (النباتات المزهرة)
+================================================= */
+
+/* --- 1. SEARCH SECTION OVERRIDES (تخصيص البحث) --- */
+.search-wrapper {
+    box-shadow: 0 10px 30px rgba(173, 20, 87, 0.15);
+}
+
+.search-box input {
+    color: #ad1457;
+}
+
+.search-box button {
+    background: #d81b60;
+}
+
+.search-box button:hover {
+    background: #ad1457;
+}
+
+/* --- 2. FLIP CARDS THEME (تخصيص البطاقات) --- */
+.flowering-cards {
+    padding: 80px 0;
+}
+
+.front-content {
+    background: linear-gradient(to top, rgba(173, 20, 87, 0.8), transparent);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #f8bbd0, #f06292);
+    color: #880e4f;
+    border: 2px solid #f48fb1;
+}
+
+.flip-card-back h3 {
+    color: #880e4f;
+}
+
+.card-btn {
+    background: #ad1457;
+}
+
+.card-btn:hover {
+    background: #880e4f;
+}
+
+/* --- 3. FOOTER THEME (تخصيص الفوتر للمظهر الزهري) --- */
+.footer {
+    background: linear-gradient(135deg, #ad1457, #880e4f) !important;
+    border-top: 4px solid #f48fb1;
+}
+
+.footer-col a:hover,
+.contact-list i,
+.social-icons a:hover {
+    color: #fce4ec !important;
+    /* Light pink color */
+}
+
+/* --- 4. THEME VARIABLES (متغيرات المظهر) --- */
+:root {
+    --green-dark: #880e4f;
+    /* Dark Pink */
+    --green-main: #e91e63;
+    /* Main Pink */
+
+    --card-back-bg: linear-gradient(135deg, #f8bbd0, #f06292);
+    --card-text: #880e4f;
+    --card-border: #f06292;
+    --card-btn-bg: #ad1457;
+    --card-btn-hover: #d81b60;
+}

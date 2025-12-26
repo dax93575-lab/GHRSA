@@ -1,0 +1,77 @@
+/* =================================================
+   MEDICINAL PAGE THEME (النباتات الطبية)
+================================================= */
+
+/* --- 1. SEARCH SECTION OVERRIDES (تخصيص البحث) --- */
+.search-wrapper {
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15);
+}
+
+.search-box input {
+    color: #2e7d32;
+}
+
+.search-box button {
+    background: #558b2f;
+    /* Herbal Green */
+}
+
+.search-box button:hover {
+    background: #33691e;
+}
+
+/* --- 2. FLIP CARDS THEME (تخصيص البطاقات) --- */
+.medicinal-cards {
+    padding: 80px 0;
+}
+
+.front-content {
+    background: linear-gradient(to top, rgba(51, 105, 30, 0.9), transparent);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #dcedc8, #aed581);
+    /* Sage Gradient */
+    color: #1b5e20;
+    border: 2px solid #aed581;
+}
+
+.flip-card-back h3,
+.flip-card-back p {
+    color: #1b5e20;
+}
+
+.card-btn {
+    background: #33691e;
+}
+
+.card-btn:hover {
+    background: #558b2f;
+}
+
+/* --- 3. FOOTER THEME (تخصيص الفوتر للمظهر الطبي) --- */
+.footer {
+    background: linear-gradient(135deg, #558b2f, #33691e) !important;
+    border-top: 4px solid #aed581;
+}
+
+.footer-col a:hover,
+.contact-list i,
+.social-icons a:hover {
+    color: #f1f8e9 !important;
+    /* Light herbal green color */
+}
+
+/* --- 4. THEME VARIABLES (متغيرات المظهر) --- */
+:root {
+    --green-dark: #0e6655;
+    /* Dark Teal */
+    --green-main: #16a085;
+    /* Main Teal */
+
+    --card-back-bg: linear-gradient(135deg, #dcedc8, #aed581);
+    --card-text: #33691e;
+    --card-border: #aed581;
+    --card-btn-bg: #33691e;
+    --card-btn-hover: #558b2f;
+}

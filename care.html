@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل العناية الشامل | غرسة</title>
+
+    <link rel="stylesheet" href="css/care.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="images/leaf.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>غرسة</span>
+            </a>
+            <nav>
+                <!-- لا يوجد class="active" هنا، سيتم إضافته بواسطة JavaScript -->
+                <a href="index.html">الرئيسية</a>
+                <a href="plantType.html">أنواع النباتات</a>
+                <a href="care.html" class="active">العناية</a>
+                <a href="index.html#about">من نحن</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section"
+        style="background-image: url('images/care.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-container" data-aos="fade-down">
+            <h1>دليل العناية الشامل</h1>
+            <p>كل ما تحتاجه لنمو نباتاتك بشكل صحي وسليم</p>
+        </div>
+    </section>
+
+    <main class="care-grid">
+
+        <div class="care-row" data-aos="fade-up">
+            <div class="care-image">
+                <img src="images/desert_cactus.png" alt="صحراوية">
+                <div class="image-overlay">تتحمل العطش</div>
+            </div>
+            <div class="care-details">
+                <div class="type-header">
+                    <div class="type-icon"><i class="fas fa-sun"></i></div>
+                    <span>الفئة: قوية التحمل</span>
+                </div>
+                <h2>النباتات الصحراوية (العصاريات)</h2>
+                <p>تمتلك هذه النباتات قدرة مذهلة على البقاء في أقسى الظروف بفضل مخازن المياه الداخلية. السر في نجاح
+                    نموها هو محاكاة بيئتها الجافة وتجنب الإفراط في الدلال.</p>
+                <div class="stats-premium">
+                    <div class="stat-item"><strong>💧 الري:</strong> ري متباعد (كل 15-20 يوم)</div>
+                    <div class="stat-item"><strong>☀️ الإضاءة:</strong> شمس مباشرة ساطعة</div>
+                    <div class="stat-item"><strong>🌡️ الحرارة:</strong> تتحمل حتى 45 درجة مئوية</div>
+                    <div class="stat-item"><strong>🏜️ التربة:</strong> رملية خشنة جيدة التصريف</div>
+                    <div class="stat-item"><strong>📏 الحجم:</strong> نمو بطيء ومستقر</div>
+                    <div class="stat-item"><strong>⚠️ تحذير:</strong> كثرة الماء تقتل الجذور فوراً</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="care-row reverse" data-aos="fade-up">
+            <div class="care-image">
+                <img src="images/home_leaf.png" alt="منزلية">
+                <div class="image-overlay">منقية للهواء</div>
+            </div>
+            <div class="care-details">
+                <div class="type-header">
+                    <div class="type-icon"><i class="fas fa-home"></i></div>
+                    <span>الفئة: زينة داخلية</span>
+                </div>
+                <h2>النباتات المنزلية</h2>
+                <p>تعتبر رئة البيت الطبيعية، فهي تمتص السموم وتفرز الأكسجين. تتطلب توازناً دقيقاً بين الرطوبة والحرارة
+                    لتبقي أوراقها خضراء يانعة طوال العام.</p>
+                <div class="stats-premium">
+                    <div class="stat-item"><strong>💧 الري:</strong> عند جفاف سطح التربة (مرتين أسبوعياً)</div>
+                    <div class="stat-item"><strong>🌤️ الإضاءة:</strong> ضوء ساطع غير مباشر</div>
+                    <div class="stat-item"><strong>🌡️ الحرارة:</strong> جو الغرفة المعتدل (20-25°C)</div>
+                    <div class="stat-item"><strong>🌱 التربة:</strong> خليط بيتموس خفيف</div>
+                    <div class="stat-item"><strong>🍃 الرطوبة:</strong> تحب رش الأوراق برذاذ الماء</div>
+                    <div class="stat-item"><strong>🧪 التسميد:</strong> سائل مرة كل شهر في الربيع</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="care-row" data-aos="fade-up">
+            <div class="care-image">
+                <img src="images/medicinal_herbs.png" alt="علاجية">
+                <div class="image-overlay">صيدلية الطبيعة</div>
+            </div>
+            <div class="care-details">
+                <div class="type-header">
+                    <div class="type-icon"><i class="fas fa-hand-holding-medical"></i></div>
+                    <span>الفئة: طبية وعطرية</span>
+                </div>
+                <h2>النباتات العلاجية</h2>
+                <p>مثل الألوفيرا والنعناع واللافندر؛ هي نباتات مزدوجة الفائدة، فهي تجمّل المكان وتستخدم في العلاجات
+                    المنزلية والزيوت العطرية المهدئة للأعصاب.</p>
+                <div class="stats-premium">
+                    <div class="stat-item"><strong>💧 الري:</strong> منتظم مع الحفاظ على الرطوبة</div>
+                    <div class="stat-item"><strong>☀️ الإضاءة:</strong> تحتاج شمس جيدة لتقوية الزيوت</div>
+                    <div class="stat-item"><strong>🌡️ الحرارة:</strong> حرارة معتدلة (22-30°C)</div>
+                    <div class="stat-item"><strong>🍂 التربة:</strong> تربة زراعية غنية بالمواد العضوية</div>
+                    <div class="stat-item"><strong>📏 الحجم:</strong> انتشار أفقي سريع (كالنعناع)</div>
+                    <div class="stat-item"><strong>✨ فائدة:</strong> تقلم باستمرار لزيادة الكثافة</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="care-row reverse" data-aos="fade-up">
+            <div class="care-image">
+                <img src="images/shade_lush.png" alt="ظل">
+                <div class="image-overlay">عاشقة الزوايا</div>
+            </div>
+            <div class="care-details">
+                <div class="type-header">
+                    <div class="type-icon"><i class="fas fa-cloud"></i></div>
+                    <span>الفئة: إضاءة ضعيفة</span>
+                </div>
+                <h2>نباتات الظل</h2>
+                <p>هذه النباتات هي الحل السحري للشقق التي لا تدخلها الشمس كثيراً. تأتي من غابات استوائية كثيفة، لذا فهي
+                    تكتفي بالقليل من الضوء والكثير من الحب.</p>
+                <div class="stats-premium">
+                    <div class="stat-item"><strong>💧 الري:</strong> ري خفيف (مرة كل 10 أيام)</div>
+                    <div class="stat-item"><strong>🌑 الإضاءة:</strong> تعيش في الظل التام أو ضوء صناعي</div>
+                    <div class="stat-item"><strong>🌡️ الحرارة:</strong> تفضل البرودة الخفيفة (15-22°C)</div>
+                    <div class="stat-item"><strong>☁️ الرطوبة:</strong> رطوبة عالية جداً</div>
+                    <div class="stat-item"><strong>📏 الحجم:</strong> متوسطة الحجم (أوراق عريضة)</div>
+                    <div class="stat-item"><strong>🧹 العناية:</strong> تنظيف الأوراق بقطعة قماش مبللة</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="care-row" data-aos="fade-up">
+            <div class="care-image">
+                <img src="images/fruit_veggies.png" alt="مثمرة">
+                <div class="image-overlay">إنتاج لا يتوقف</div>
+            </div>
+            <div class="care-details">
+                <div class="type-header">
+                    <div class="type-icon"><i class="fas fa-apple-alt"></i></div>
+                    <span>الفئة: إنتاجية خارجية</span>
+                </div>
+                <h2>النباتات المثمرة</h2>
+                <p>سواء كانت أشجار حمضيات أو خضروات منزلية؛ تحتاج هذه الفئة لعناية مكثفة وتغذية مستمرة بالمعادن لتتمكن
+                    من تحويل طاقة الشمس إلى ثمار لذيذة.</p>
+                <div class="stats-premium">
+                    <div class="stat-item"><strong>💧 الري:</strong> ري يومي في الصيف</div>
+                    <div class="stat-item"><strong>☀️☀️ الإضاءة:</strong> شمس قوية (8 ساعات على الأقل)</div>
+                    <div class="stat-item"><strong>🚜 التسميد:</strong> سماد NPK دوري كل أسبوعين</div>
+                    <div class="stat-item"><strong>🌡️ الحرارة:</strong> تختلف حسب موسم الثمر</div>
+                    <div class="stat-item"><strong>📏 الحجم:</strong> تحتاج مساحة جذور واسعة</div>
+                    <div class="stat-item"><strong>✂️ التقليم:</strong> ضروري جداً لتركيز الطاقة في الثمار</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="care-row reverse" data-aos="fade-up">
+            <div class="care-image">
+                <img src="images/flowering_roses.png" alt="زهرية">
+                <div class="image-overlay">جمال بصري</div>
+            </div>
+            <div class="care-details">
+                <div class="type-header">
+                    <div class="type-icon"><i class="fas fa-spa"></i></div>
+                    <span>الفئة: موسمية ودائمة</span>
+                </div>
+                <h2>النباتات الزهرية</h2>
+                <p>زينة الحديقة والروح، تتطلب عناية بمواعيد الإزهار وإزالة الأزهار الذابلة أولاً بأول لتحفيز النبتة على
+                    إنتاج المزيد من الألوان والجمال.</p>
+                <div class="stats-premium">
+                    <div class="stat-item"><strong>💧 الري:</strong> ري معتدل ومنتظم صباحاً</div>
+                    <div class="stat-item"><strong>🌸 الإضاءة:</strong> شمس مغربلة أو ساطعة</div>
+                    <div class="stat-item"><strong>🌡️ الحرارة:</strong> تفضل الاعتدال (18-28°C)</div>
+                    <div class="stat-item"><strong>🧪 التسميد:</strong> محفز إزهار فوسفوري</div>
+                    <div class="stat-item"><strong>🦋 التلقيح:</strong> يفضل وضعها في مكان مفتوح للنحل</div>
+                    <div class="stat-item"><strong>📏 الحجم:</strong> تختلف حسب النوع (أقزام وشجيرات)</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>غرسة</h3>
+                <p>موقع عربي يهدف لنشر المعرفة حول عالم النباتات بطريقة عصرية وبسيطة.</p>
+                <p class="copyright">© 2025 غرسة. جميع الحقوق محفوظة.</p>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> gharsa@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +218 (92-1) 123_456</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+
+</html>
