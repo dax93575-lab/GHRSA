@@ -219,10 +219,7 @@
     padding: 20px 5px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
-<<<<<<< HEAD
     overflow-y: hidden;
-=======
->>>>>>> b1d281b4c1397a5902ec1b800fb4420d50b6b5d0
 }
 
 .related-plants-scroll .flip-card {
@@ -291,10 +288,7 @@
 
 @media (max-width: 768px) {
     .plant-title-section h1 {
-<<<<<<< HEAD
         margin-top: 50px;
-=======
->>>>>>> b1d281b4c1397a5902ec1b800fb4420d50b6b5d0
         font-size: 2.5rem;
     }
 
