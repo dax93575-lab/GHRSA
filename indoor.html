@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النباتات المنزلية - غرسة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/indoor.css">
+    <link rel="icon" href="images/leaf.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>غرسة</span>
+            </a>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="plantType.html">أنواع النباتات</a>
+                <a href="care.html">العناية</a>
+                <a href="index.html#about">من نحن</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" style="background-image: url('images/home_leaf.png');">
+        <div class="hero-overlay" style="background: linear-gradient(rgba(0, 105, 92, 0.7), rgba(0, 105, 92, 0.4));">
+        </div>
+        <div class="hero-container" data-aos="fade-up">
+            <div class="hero-glass-card">
+                <h1>النباتات المنزلية</h1>
+                <p>تضيف حياة وهواءً نقياً لمساحتك الخاصة.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="search-section">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input type="text" id="plantSearch" placeholder="ابحث عن اسم النبات..." onkeyup="filterPlants()">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="indoor-cards">
+        <div class="container">
+            <h2 class="section-title">رفيق منزلك الأخضر</h2>
+            <div class="flip-grid" id="plantsGrid">
+
+                <!-- Card 1: السانسيفيريا (جلد النمر) -->
+                <div class="flip-card" data-name="السانسيفيريا (جلد النمر)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/home_السانسيفيريا.png" alt="السانسيفيريا (جلد النمر)">
+                            <div class="front-content">
+                                <h3>السانسيفيريا (جلد النمر)</h3>
+                                <a href="indoor-details.html?plant=السانسيفيريا (جلد النمر)"
+                                    class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>السانسيفيريا (جلد النمر)</h3>
+                            <p>نبات منزلي شديد التحمل وقليل العناية.</p>
+                            <a href="indoor-details.html?plant=السانسيفيريا (جلد النمر)" class="card-btn">تفاصيل
+                                أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: البوتس -->
+                <div class="flip-card" data-name="البوتس">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/home_البوتس.png" alt="البوتس">
+                            <div class="front-content">
+                                <h3>البوتس</h3>
+                                <a href="indoor-details.html?plant=البوتس" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>البوتس</h3>
+                            <p>نبات منزلي متدلٍ سريع النمو.</p>
+                            <a href="indoor-details.html?plant=البوتس" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: المونستيرا -->
+                <div class="flip-card" data-name="المونستيرا">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/home_المونستيرا.png" alt="المونستيرا">
+                            <div class="front-content">
+                                <h3>المونستيرا</h3>
+                                <a href="indoor-details.html?plant=المونستيرا" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>المونستيرا</h3>
+                            <p>نبات ورقي كبير بلمسة عصرية.</p>
+                            <a href="indoor-details.html?plant=المونستيرا" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: الفيكس بنجامينا -->
+                <div class="flip-card" data-name="الفيكس بنجامينا">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/home_الفيكس_بنجامينا.png" alt="الفيكس بنجامينا">
+                            <div class="front-content">
+                                <h3>الفيكس بنجامينا</h3>
+                                <a href="indoor-details.html?plant=الفيكس بنجامينا" class="mobile-card-btn">تفاصيل
+                                    أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الفيكس بنجامينا</h3>
+                            <p>شجرة داخلية أنيقة.</p>
+                            <a href="indoor-details.html?plant=الفيكس بنجامينا" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: زاميا -->
+                <div class="flip-card" data-name="زاميا">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/home_zamia.png" alt="زاميا">
+                            <div class="front-content">
+                                <h3>زاميا</h3>
+                                <a href="indoor-details.html?plant=زاميا" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>زاميا</h3>
+                            <p>نبات منزلي فاخر شديد التحمل.</p>
+                            <a href="indoor-details.html?plant=زاميا" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: الفيكس المطاطي -->
+                <div class="flip-card" data-name="الفيكس المطاطي">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/home_rubber_plant.png" alt="الفيكس المطاطي">
+                            <div class="front-content">
+                                <h3>الفيكس المطاطي</h3>
+                                <a href="indoor-details.html?plant=الفيكس المطاطي" class="mobile-card-btn">تفاصيل
+                                    أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الفيكس المطاطي</h3>
+                            <p>نبات منزلي بأوراق عريضة لامعة.</p>
+                            <a href="indoor-details.html?plant=الفيكس المطاطي" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function filterPlants() {
+            let input = document.getElementById('plantSearch');
+            let filter = input.value.toUpperCase();
+            let grid = document.getElementById('plantsGrid');
+            let cards = grid.getElementsByClassName('flip-card');
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                if (name.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>غرسة</h3>
+                <p>موقع عربي يهدف لنشر المعرفة حول عالم النباتات.</p>
+                <p class="copyright">© 2025 غرسة. جميع الحقوق محفوظة.</p>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> gharsa@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +218 (92-1) 123_456</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

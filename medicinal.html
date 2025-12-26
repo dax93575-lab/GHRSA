@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النباتات العلاجية - غرسة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/medicinal.css">
+    <link rel="icon" href="images/leaf.ico" type="image/x-icon">
+
+</head>
+
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i> <span>غرسة</span></a>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="plantType.html">أنواع النباتات</a>
+                <a href="care.html">العناية</a>
+                <a href="index.html#about">من نحن</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" style="background-image: url('images/medicinal_herbs.png');">
+        <div class="hero-overlay" style="background: linear-gradient(rgba(46, 125, 50, 0.7), rgba(46, 125, 50, 0.4));">
+        </div>
+        <div class="hero-container" data-aos="fade-up">
+            <div class="hero-glass-card">
+                <h1>النباتات العلاجية</h1>
+                <p>صيدلية الطبيعة في منزلك. اكتشف النباتات التي تعزز الصحة وتضفي رائحة عطرية مميزة.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="search-section">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input type="text" id="plantSearch" placeholder="ابحث عن اسم النبات..." onkeyup="filterPlants()">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="medicinal-cards">
+        <div class="container">
+            <h2 class="section-title">أشهر الأعشاب</h2>
+            <div class="flip-grid" id="plantsGrid">
+
+                <!-- Card 1: النعناع -->
+                <div class="flip-card" data-name="النعناع">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/medical_النعناع.png" alt="النعناع">
+                            <div class="front-content">
+                                <h3>النعناع</h3>
+                                <a href="medicinal-details.html?plant=النعناع" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>النعناع</h3>
+                            <p>نبات طبي عطري سريع النمو وسهل الزراعة.</p>
+                            <a href="medicinal-details.html?plant=النعناع" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: الريحان -->
+                <div class="flip-card" data-name="الريحان">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/medical_الريحان.png" alt="الريحان">
+                            <div class="front-content">
+                                <h3>الريحان</h3>
+                                <a href="medicinal-details.html?plant=الريحان" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الريحان</h3>
+                            <p>نبات طبي وعطري يستخدم في الطهي والعلاج.</p>
+                            <a href="medicinal-details.html?plant=الريحان" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: الزعتر -->
+                <div class="flip-card" data-name="الزعتر">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/medical_الزعتر.png" alt="الزعتر">
+                            <div class="front-content">
+                                <h3>الزعتر</h3>
+                                <a href="medicinal-details.html?plant=الزعتر" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الزعتر</h3>
+                            <p>نبات طبي عطري يتحمل الجفاف.</p>
+                            <a href="medicinal-details.html?plant=الزعتر" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: إكليل الجبل -->
+                <div class="flip-card" data-name="إكليل الجبل">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/medical_إكليل_الجبل.png" alt="إكليل الجبل">
+                            <div class="front-content">
+                                <h3>إكليل الجبل</h3>
+                                <a href="medicinal-details.html?plant=إكليل الجبل" class="mobile-card-btn">تفاصيل
+                                    أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>إكليل الجبل</h3>
+                            <p>نبات طبي عطري دائم الخضرة.</p>
+                            <a href="medicinal-details.html?plant=إكليل الجبل" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: البابونج -->
+                <div class="flip-card" data-name="البابونج">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/medical_البابونج.png" alt="البابونج">
+                            <div class="front-content">
+                                <h3>البابونج</h3>
+                                <a href="medicinal-details.html?plant=البابونج" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>البابونج</h3>
+                            <p>نبات طبي مزهر مهدئ للأعصاب.</p>
+                            <a href="medicinal-details.html?plant=البابونج" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: الخزامى (اللافندر) -->
+                <div class="flip-card" data-name="الخزامى (اللافندر)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/medical_الخزامى.png" alt="الخزامى (اللافندر)">
+                            <div class="front-content">
+                                <h3>الخزامى (اللافندر)</h3>
+                                <a href="medicinal-details.html?plant=الخزامى (اللافندر)" class="mobile-card-btn">تفاصيل
+                                    أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الخزامى (اللافندر)</h3>
+                            <p>نبات طبي عطري برائحة مميزة.</p>
+                            <a href="medicinal-details.html?plant=الخزامى (اللافندر)" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function filterPlants() {
+            let input = document.getElementById('plantSearch');
+            let filter = input.value.toUpperCase();
+            let grid = document.getElementById('plantsGrid');
+            let cards = grid.getElementsByClassName('flip-card');
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                if (name.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>غرسة</h3>
+                <p>موقع عربي يهدف لنشر المعرفة حول عالم النباتات.</p>
+                <p class="copyright">© 2025 غرسة. جميع الحقوق محفوظة.</p>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> gharsa@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +218 (92-1) 123_456</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

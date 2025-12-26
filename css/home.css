@@ -1,0 +1,197 @@
+/* =================================================
+   HOME PAGE SPECIFIC STYLES (الصفحة الرئيسية)
+================================================= */
+
+/* --- 1. HERO & BUTTONS --- */
+/* These are handled by commen.css */
+
+/* --- 2. EXPLORE SECTION (قسم استكشف) --- */
+.explore {
+    padding: 120px 0;
+}
+
+.interactive-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+#lottie-animation {
+    width: 300px;
+    height: 300px;
+}
+
+/* Morphing Card Effect */
+.morph-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: var(--green-dark);
+    font-weight: 700;
+    text-align: center;
+
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.09);
+    transition: var(--morph-transition);
+}
+
+.morph-card:hover {
+    width: 350px;
+    height: 260px;
+    border-radius: 25px;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+    box-shadow: 0 15px 40px rgba(27, 77, 62, 0.3);
+}
+
+.morph-card .initial-text {
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 8px rgba(46, 58, 54, 0.1);
+    /* Added Shadow */
+}
+
+.morph-card:hover .initial-text {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.morph-card .hover-content {
+    position: absolute;
+    padding: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.15s;
+}
+
+.morph-card:hover .hover-content {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    /* Added Shadow */
+}
+
+.hover-content i {
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+
+.hover-content h3 {
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.hover-content p {
+    font-size: 1rem;
+    font-weight: 400;
+   
+    line-height: 1.6;
+    color: var(--white);
+}
+
+/* --- 3. POPULAR PLANTS (النباتات الشائعة) --- */
+.popular-plants {
+    padding: 80px 0;
+}
+
+.popular-grid-horizontal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 30px;
+}
+
+.plant-card-horizontal {
+    background: var(--bg-card);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    transition: var(--transition);
+}
+
+.plant-card-horizontal:hover {
+    transform: translateY(-12px);
+    box-shadow: var(--shadow-hover);
+}
+
+.plant-card-horizontal .card-image {
+    width: 45%;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.plant-card-horizontal .card-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.plant-card-horizontal:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.plant-card-horizontal .card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content h3 {
+    font-size: 1.4rem;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.learn-more {
+    display: inline-block;
+    align-self: flex-start;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--green-main);
+}
+
+.learn-more:hover i {
+    transform: translateX(-5px);
+}
+
+.learn-more i {
+    font-size: 0.9em;
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+/* View More Button Alignment */
+.more-plants-action {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* --- 4. RESPONSIVE DESIGN (التجاوب) --- */
+@media (max-width: 768px) {
+    .interactive-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* Optional: make them behave more like standard cards on mobile if hover is tricky */
+    /* For now, keeping the hover effect but ensuring layout works */
+}

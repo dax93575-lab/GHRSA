@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النباتات الزهرية - غرسة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/flowering.css">
+    <link rel="icon" href="images/leaf.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo"><i class="fas fa-leaf"></i> <span>غرسة</span></a>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="plantType.html">أنواع النباتات</a>
+                <a href="care.html">العناية</a>
+                <a href="index.html#about">من نحن</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" style="background-image: url('images/flowering_roses.png');">
+        <div class="hero-overlay" style="background: linear-gradient(rgba(173, 20, 87, 0.7), rgba(173, 20, 87, 0.4));">
+        </div>
+        <div class="hero-container" data-aos="fade-up">
+            <div class="hero-glass-card">
+                <h1>النباتات المزهرة</h1>
+                <p>تنشر عبق الجمال والألوان في كل مكان.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="search-section">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input type="text" id="plantSearch" placeholder="ابحث عن اسم النبات..." onkeyup="filterPlants()">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <section class="flowering-cards">
+        <div class="container">
+            <h2 class="section-title">جمال الطبيعة</h2>
+            <div class="flip-grid" id="plantsGrid">
+
+                <!-- Card 1: الورد البلدي -->
+                <div class="flip-card" data-name="الورد البلدي">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/flowering_الورد_البلدي.png" alt="الوردالبلدي">
+                            <div class="front-content">
+                                <h3>الورد البلدي</h3>
+                                <a href="flowering-details.html?plant=الورد البلدي" class="mobile-card-btn">تفاصيل
+                                    أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الورد البلدي</h3>
+                            <p>شجيرة مزهرة ذات رائحة جميلة.</p>
+                            <a href="flowering-details.html?plant=الورد البلدي" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: الجوري -->
+                <div class="flip-card" data-name="الجوري">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/flowering_الجوري.png" alt="الجوري">
+                            <div class="front-content">
+                                <h3>الجوري</h3>
+                                <a href="flowering-details.html?plant=الجوري" class="mobile-card-btn">تفاصيل
+                                    أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الجوري</h3>
+                            <p>ورد عطري فاخر.</p>
+                            <a href="flowering-details.html?plant=الجوري" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: الياسمين -->
+                <div class="flip-card" data-name="الياسمين">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/flowering_الياسمين.png" alt="الياسمين">
+                            <div class="front-content">
+                                <h3>الياسمين</h3>
+                                <a href="flowering-details.html?plant=الياسمين" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الياسمين</h3>
+                            <p>نبات متسلق مزهر عطري.</p>
+                            <a href="flowering-details.html?plant=الياسمين" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: الجهنمية -->
+                <div class="flip-card" data-name="الجهنمية">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/flowering_الجهنمية.png" alt="الجهنمية">
+                            <div class="front-content">
+                                <h3>الجهنمية</h3>
+                                <a href="flowering-details.html?plant=الجهنمية" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الجهنمية</h3>
+                            <p>نبات مزهر قوي التحمل.</p>
+                            <a href="flowering-details.html?plant=الجهنمية" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: القرنفل -->
+                <div class="flip-card" data-name="القرنفل">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/flowering_القرنفل.png" alt="القرنفل">
+                            <div class="front-content">
+                                <h3>القرنفل</h3>
+                                <a href="flowering-details.html?plant=القرنفل" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>القرنفل</h3>
+                            <p>نبات مزهر بألوان متعددة.</p>
+                            <a href="flowering-details.html?plant=القرنفل" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: الكركديه -->
+                <div class="flip-card" data-name="الكركديه">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/flowering_الكركديه.png" alt="الكركديه">
+                            <div class="front-content">
+                                <h3>الكركديه</h3>
+                                <a href="flowering-details.html?plant=الكركديه" class="mobile-card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>الكركديه</h3>
+                            <p>نبات مزهر استوائي كبير الأزهار.</p>
+                            <a href="flowering-details.html?plant=الكركديه" class="card-btn">تفاصيل أكثر</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function filterPlants() {
+            let input = document.getElementById('plantSearch');
+            let filter = input.value.toUpperCase();
+            let grid = document.getElementById('plantsGrid');
+            let cards = grid.getElementsByClassName('flip-card');
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].getAttribute('data-name');
+                if (name.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>غرسة</h3>
+                <p>موقع عربي يهدف لنشر المعرفة حول عالم النباتات.</p>
+                <p class="copyright">© 2025 غرسة. جميع الحقوق محفوظة.</p>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> gharsa@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +218 (92-1) 123_456</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

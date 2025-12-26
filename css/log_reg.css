@@ -1,0 +1,175 @@
+/* =================================================
+   LOGIN & REGISTRATION STYLES (صفحات الدخول والتسجيل)
+================================================= */
+
+:root {
+  --green-dark: #1b4d3e;
+  --green-main: #4fa48f;
+  --green-light: #a8d5c2;
+  --bg: #f7f9f6;
+  --white: #ffffff;
+  --text: #2e3a36;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- 1. BODY & BACKGROUND --- */
+body {
+  font-family: 'Cairo', sans-serif;
+  background:
+    linear-gradient(135deg, rgba(27, 77, 62, 0.8), rgba(79, 164, 143, 0.6)),
+    url("../images/indoor_wall.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* --- 2. AUTH CARD CONTAINER --- */
+.auth-container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 50px 40px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-box h1 {
+  color: var(--green-dark);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.auth-box h2 {
+  color: var(--green-main);
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* --- 3. FORM INPUTS (حقول الإدخال) --- */
+.input-group {
+  text-align: right;
+  margin-bottom: 22px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: var(--green-dark);
+  font-weight: 600;
+  padding-right: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.9);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--green-main);
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(79, 164, 143, 0.1);
+  transform: scale(1.02);
+}
+
+/* --- 4. BUTTONS & ACTIONS (الأزرار والروابط) --- */
+.btn-auth {
+  width: 100%;
+  margin-top: 15px;
+  padding: 16px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--green-main), var(--green-dark));
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 15px rgba(27, 77, 62, 0.2);
+}
+
+.btn-auth:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 25px rgba(27, 77, 62, 0.3);
+}
+
+.btn-auth:active {
+  transform: scale(0.98);
+}
+
+.switch {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.switch a {
+  color: var(--green-main);
+  font-weight: 700;
+  position: relative;
+  transition: 0.3s;
+}
+
+.switch a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--green-main);
+  transition: width 0.3s;
+}
+
+.switch a:hover:after {
+  width: 100%;
+}
+
+.switch a:hover {
+  color: var(--green-dark);
+}

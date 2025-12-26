@@ -1,0 +1,89 @@
+/* =================================================
+   DESERT PAGE THEME (النباتات الصحراوية)
+================================================= */
+@import url('../home.css');
+/* Import base styles */
+
+/* =================================================
+   HERO SECTION
+================================================= */
+/* Hero is handled by commen.css */
+
+/* --- 1. SEARCH SECTION OVERRIDES (تخصيص شريط البحث) --- */
+.search-wrapper {
+    box-shadow: 0 10px 30px rgba(27, 77, 62, 0.15);
+}
+
+.search-box button {
+    background: var(--green-main);
+}
+
+/* --- 2. FLIP CARDS THEME (تخصيص البطاقات) --- */
+.desert-cards {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #e6cfa8, #b89f78);
+    /* Sand colors */
+    color: var(--green-dark);
+    border: 2px solid #b89f78;
+}
+
+.flip-card-back h3,
+.flip-card-back p {
+    color: var(--green-dark);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .desert-hero-content {
+        justify-content: center;
+    }
+
+    .desert-text {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-bottom: 5px solid white;
+    }
+
+    .desert-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- 3. FOOTER THEME (تخصيص الفوتر للمظهر الصحراوي) --- */
+.footer {
+    background: linear-gradient(135deg, #b89f78, #8d7048) !important;
+    border-top: 4px solid #e6cfa8;
+}
+
+.footer-col a:hover,
+.contact-list i,
+.social-icons a:hover {
+    color: #fdfaf6 !important;
+    /* Light sand color */
+}
+
+/* --- 4. THEME VARIABLES (متغيرات المظهر) --- */
+:root {
+    --card-back-bg: linear-gradient(135deg, #e6cfa8, #b89f78);
+    --card-text: #1b4d3e;
+    --card-border: #b89f78;
+    --card-btn-bg: #1b4d3e;
+    --card-btn-hover: #4fa48f;
+}
+
+/* Standardize Header colors for consistency */
+.logo,
+nav a:hover,
+nav a.active {
+    color: #1b4d3e !important;
+}
+
+nav a {
+    color: #2e3a36 !important;
+}

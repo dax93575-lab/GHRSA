@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل النبات - النباتات الصحراوية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- Link Category CSS for Footer/Card Styles -->
+    <link rel="stylesheet" href="css/desert.css">
+    <link rel="stylesheet" href="css/plant-details.css">
+    <link rel="icon" href="images/leaf.ico" type="image/x-icon">
+
+
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>غرسة</span>
+            </a>
+            <nav>
+                <a href="index.html">الرئيسية</a>
+                <a href="plantType.html">أنواع النباتات</a>
+                <a href="care.html">العناية</a>
+                <a href="index.html#about">من نحن</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="plant-details-page">
+        <div class="container">
+
+            <!-- Plant Title -->
+            <div class="plant-title-section">
+                <!-- Default Content (will be overwritten by JS if param exists) -->
+                <h1>الصبار الذهبي</h1>
+                <p class="subtitle">Echinocactus grusonii</p>
+            </div>
+
+            <!-- Split Section -->
+            <div class="plant-split-layout">
+                <div class="plant-image-container">
+                    <img src="images/desert_cactus_card_1766492204238.png" alt="الصبار الذهبي" class="main-plant-image">
+                </div>
+
+                <div class="plant-requirements">
+                    <h2>احتياجات النبات</h2>
+
+                    <div class="requirement-item sun-item">
+                        <div class="req-label"><i class="fas fa-sun"></i> <span>الإضاءة</span></div>
+                        <div class="slider-container">
+                            <input type="range" class="req-slider sun-slider" value="95" disabled>
+                            <span class="value-text">كاملة</span>
+                        </div>
+                        <p class="req-note">شمس مباشرة طوال اليوم.</p>
+                    </div>
+
+                    <div class="requirement-item water-item">
+                        <div class="req-label"><i class="fas fa-tint"></i> <span>الماء</span></div>
+                        <div class="slider-container">
+                            <input type="range" class="req-slider water-slider" value="10" disabled>
+                            <span class="value-text">نادرة</span>
+                        </div>
+                        <p class="req-note">ري قليل جداً، اترك التربة تجف تماماً.</p>
+                    </div>
+
+                    <div class="requirement-item soil-item">
+                        <div class="req-label"><i class="fas fa-layer-group"></i> <span>التربة</span></div>
+                        <div class="slider-container">
+                            <input type="range" class="req-slider soil-slider" value="20" disabled>
+                            <span class="value-text">رملية</span>
+                        </div>
+                        <p class="req-note">تربة رملية جيدة التصريف جداً.</p>
+                    </div>
+
+                    <div class="requirement-item fertilizer-item">
+                        <div class="req-label"><i class="fas fa-seedling"></i> <span>السماد</span></div>
+                        <div class="slider-container">
+                            <input type="range" class="req-slider fertilizer-slider" value="30" disabled>
+                            <span class="value-text">قليل</span>
+                        </div>
+                        <p class="req-note">مرة واحدة في الربيع.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="plant-description">
+                <h2>عن النبات والعناية به</h2>
+                <div class="desc-content">
+                    <p>يعتبر الصبار الذهبي من أشهر أنواع الصبار الكروي، ويتميز بأشواكه الذهبية الجميلة التي تغطيه
+                        بالكامل. يعد خياراً مثالياً للحدائق الصحراوية أو كنبات داخلي في مكان مشمس جداً.</p>
+                    <p>يتحمل هذا النبات الظروف القاسية والجفاف لفترات طويلة. احرص على عدم الإفراط في الري لأنه السبب
+                        الرئيسي لموت الصبار.</p>
+                </div>
+            </div>
+
+            <!-- Related Plants (Horizontal Scroll) -->
+            <div class="related-plants">
+                <h2 class="section-title">نباتات من نفس النوع</h2>
+                <!-- Changed class from flip-grid to related-plants-scroll -->
+                <div class="related-plants-scroll">
+
+                    <!-- Card 1: الألوفيرا -->
+                    <div class="flip-card" data-name="الألوفيرا">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/desert_الألوفيرا.png" alt="الألوفيرا">
+                                <div class="front-content">
+                                    <h3>الألوفيرا</h3>
+                                    <a href="desert-details.html?plant=الألوفيرا" class="mobile-card-btn">تفاصيل
+                                        أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>الألوفيرا</h3>
+                                <p>نبات عصاري طبي يتحمل الجفاف وسهل العناية.</p>
+                                <a href="desert-details.html?plant=الألوفيرا" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: الصبار الذهبي -->
+                    <div class="flip-card" data-name="الصبار الذهبي">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/desert_الصبار_الذهبي.png" alt="الصبار الذهبي">
+                                <div class="front-content">
+                                    <h3>الصبار الذهبي</h3>
+                                    <a href="desert-details.html?plant=الصبار الذهبي" class="mobile-card-btn">تفاصيل
+                                        أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>الصبار الذهبي</h3>
+                                <p>صبار كروي مزخرف شديد التحمل.</p>
+                                <a href="desert-details.html?plant=الصبار الذهبي" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: التين الشوكي -->
+                    <div class="flip-card" data-name="التين الشوكي">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/desert_التين_الشوكي.png" alt="التين الشوكي">
+                                <div class="front-content">
+                                    <h3>التين الشوكي</h3>
+                                    <a href="desert-details.html?plant=التين الشوكي" class="mobile-card-btn">تفاصيل
+                                        أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>التين الشوكي</h3>
+                                <p>نبات صحراوي مثمر شديد التحمل.</p>
+                                <a href="desert-details.html?plant=التين الشوكي" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: أغاف الصحراء -->
+                    <div class="flip-card" data-name="أغاف الصحراء">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/desert_أغاف_الصحراء.png" alt="أغاف الصحراء">
+                                <div class="front-content">
+                                    <h3>أغاف الصحراء</h3>
+                                    <a href="desert-details.html?plant=أغاف الصحراء" class="mobile-card-btn">تفاصيل
+                                        أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>أغاف الصحراء</h3>
+                                <p>نبات صحراوي قوي بأوراق سميكة.</p>
+                                <a href="desert-details.html?plant=أغاف الصحراء" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: الصبار العمودي -->
+                    <div class="flip-card" data-name="الصبار العمودي">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/desert_الصبار_العمودي.png" alt="الصبار العمودي">
+                                <div class="front-content">
+                                    <h3>الصبار العمودي</h3>
+                                    <a href="desert-details.html?plant=الصبار العمودي" class="mobile-card-btn">تفاصيل
+                                        أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>الصبار العمودي</h3>
+                                <p>صبار طويل أنيق للحدائق والأصص.</p>
+                                <a href="desert-details.html?plant=الصبار العمودي" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: اليوفوربيا -->
+                    <div class="flip-card" data-name="اليوفوربيا">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="images/desert_اليوفوربيا.png" alt="اليوفوربيا">
+                                <div class="front-content">
+                                    <h3>اليوفوربيا</h3>
+                                    <a href="desert-details.html?plant=اليوفوربيا" class="mobile-card-btn">تفاصيل
+                                        أكثر</a>
+                                </div>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>اليوفوربيا</h3>
+                                <p>نبات عصاري صحراوي سريع النمو.</p>
+                                <a href="desert-details.html?plant=اليوفوربيا" class="card-btn">تفاصيل أكثر</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>غرسة</h3>
+                <p>موقع عربي يهدف لنشر المعرفة حول عالم النباتات.</p>
+                <p class="copyright">© 2025 غرسة. جميع الحقوق محفوظة.</p>
+            </div>
+            <div class="footer-col">
+                <h3>تواصل معنا</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> gharsa@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +218 (92-1) 123_456</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>تابعنا</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to the logic script -->
+    <script src="js/plant-details.js"></script>
+</body>
+
+</html>

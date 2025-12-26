@@ -1,0 +1,297 @@
+/* =================================================
+   PLANT DETAILS PAGE (تفاصيل النبات)
+================================================= */
+@import url('../home.css');
+
+/* --- 1. PAGE SETUP & TITLE --- */
+.plant-details-page {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    background-color: #fdfaf6;
+}
+
+.plant-title-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.plant-title-section h1 {
+    font-size: 3.5rem;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+}
+
+.plant-title-section .subtitle {
+    font-size: 1.2rem;
+    color: #777;
+    font-style: italic;
+    font-family: serif;
+}
+
+/* --- 2. SPLIT LAYOUT (IMAGE & REQUIREMENTS) --- */
+.plant-split-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/* Image Container */
+.plant-image-container {
+    flex: 1;
+    position: relative;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    height: 500px;
+}
+
+.main-plant-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.plant-image-container:hover .main-plant-image {
+    transform: scale(1.05);
+}
+
+/* Requirements Card */
+.plant-requirements {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.plant-requirements h2 {
+    font-size: 2rem;
+    color: var(--green-dark);
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.requirement-item {
+    margin-bottom: 25px;
+}
+
+.req-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1.1rem;
+}
+
+/* Icons Colors per Type */
+.sun-item .req-label i {
+    color: #fbc02d;
+}
+
+.water-item .req-label i {
+    color: #039be5;
+}
+
+.soil-item .req-label i {
+    color: #795548;
+}
+
+.fertilizer-item .req-label i {
+    color: #43a047;
+}
+
+.req-label i {
+    font-size: 1.2rem;
+}
+
+/* --- 3. CUSTOM RANGE SLIDERS (مؤشرات القياس) --- */
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.req-slider {
+    flex-grow: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    /* Keep for cross-browser compatibility */
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    outline: none;
+    opacity: 0.9;
+    /* Keep original opacity */
+}
+
+.sun-slider::-webkit-slider-thumb {
+    background: #fbc02d;
+}
+
+.water-slider::-webkit-slider-thumb {
+    background: #039be5;
+}
+
+.soil-slider::-webkit-slider-thumb {
+    background: #795548;
+}
+
+.fertilizer-slider::-webkit-slider-thumb {
+    background: #43a047;
+}
+
+/* Custom Thumb Styles (The Handle) */
+.req-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: default;
+    /* Keep original cursor */
+    box-shadow: 0 0 0 4px white, 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Keep moz-range-thumb for Firefox compatibility */
+.req-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: default;
+    box-shadow: 0 0 0 4px white, 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+/* Value Text next to slider */
+.value-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #666;
+    min-width: 50px;
+    text-align: left;
+    /* Keep original text-align */
+}
+
+.req-note {
+    font-size: 0.9rem;
+    color: #888;
+    margin-right: 30px;
+}
+
+/* --- 4. DESCRIPTION & CONTENT --- */
+.plant-description {
+    margin-bottom: 80px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 80px;
+    /* Consolidated margin */
+}
+
+.plant-description h2 {
+    font-size: 2.5rem;
+    color: var(--green-dark);
+    margin-bottom: 30px;
+}
+
+.desc-content p {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* --- 5. RELATED PLANTS (نباتات مشابهة) --- */
+.related-plants {
+    padding-top: 40px;
+    border-top: 1px solid #ddd;
+}
+
+.related-plants-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.related-plants-scroll .flip-card {
+    flex: 0 0 300px;
+    height: 400px;
+}
+
+/* Related Cards Theming */
+.related-plants-scroll .flip-card-back {
+    background: var(--card-back-bg, linear-gradient(135deg, #e8f5e9, #c8e6c9)) !important;
+    color: var(--card-text, #1b4d3e) !important;
+    border: 2px solid var(--card-border, #a8d5c2) !important;
+}
+
+.related-plants-scroll .flip-card-back h3,
+.related-plants-scroll .flip-card-back p {
+    color: var(--card-text, #1b4d3e) !important;
+}
+
+.related-plants-scroll .card-btn {
+    background: var(--card-btn-bg, #1b4d3e) !important;
+    color: white !important;
+    /* Keep original color */
+}
+
+.related-plants-scroll .card-btn:hover {
+    background: var(--card-btn-hover, #4fa48f) !important;
+}
+
+/* Custom Scrollbar Styles */
+.related-plants-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.related-plants-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.related-plants-scroll::-webkit-scrollbar-thumb {
+    background: var(--green-main, #27ae60);
+    border-radius: 4px;
+}
+
+.related-plants-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--green-dark, #1e8449);
+}
+
+/* --- 6. RESPONSIVE DESIGN (التجاوب) --- */
+@media (max-width: 992px) {
+    .plant-split-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .plant-image-container,
+    .plant-requirements {
+        width: 100%;
+        flex: none;
+    }
+
+    .plant-image-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .plant-title-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .plant-image-container {
+        height: 300px;
+    }
+}

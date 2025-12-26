@@ -1,0 +1,95 @@
+/* =================================================
+   FRUIT PAGE THEME (النباتات المثمرة)
+================================================= */
+
+/* --- 1. SEARCH SECTION OVERRIDES (تخصيص البحث) --- */
+.search-wrapper {
+    box-shadow: 0 10px 30px rgba(230, 81, 0, 0.15);
+}
+
+.search-box input {
+    color: #e65100;
+}
+
+.search-box button {
+    background: #ef6c00;
+}
+
+.search-box button:hover {
+    background: #e65100;
+}
+
+/* --- 2. FLIP CARDS THEME (تخصيص البطاقات) --- */
+.fruit-cards {
+    padding: 80px 0;
+}
+
+.front-content {
+    background: linear-gradient(to top, rgba(230, 81, 0, 0.8), transparent);
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #ffe0b2, #ffb74d);
+    color: #e65100;
+    border: 2px solid #ffb74d;
+}
+
+.flip-card-back h3 {
+    color: #e65100;
+}
+
+.card-btn {
+    background: #e65100;
+}
+
+.card-btn:hover {
+    background: #bf360c;
+}
+
+/* --- 3. FOOTER THEME (تخصيص الفوتر للمظهر الثمري) --- */
+.footer {
+    background: linear-gradient(135deg, #ef6c00, #bf360c) !important;
+    border-top: 4px solid #ffb74d;
+}
+
+.footer-col a:hover,
+.contact-list i,
+.social-icons a:hover {
+    color: #fff3e0 !important;
+    /* Light orange color */
+}
+
+/* --- 4. THEME VARIABLES (متغيرات المظهر) --- */
+:root {
+    --green-dark: #bf360c;
+    /* Dark Orange/Red */
+    --green-main: #ef6c00;
+    /* Main Orange */
+
+    --card-back-bg: linear-gradient(135deg, #ffe0b2, #ffb74d);
+    --card-text: #e65100;
+    --card-border: #ffb74d;
+    --card-btn-bg: #e65100;
+    --card-btn-hover: #f57c00;
+}
+
+.plant-title-section h1,
+.plant-requirements h2,
+.plant-description h2 {
+    color: var(--green-dark);
+}
+
+.req-label i {
+    color: var(--green-main);
+}
+
+/* Standardize Header */
+.logo,
+nav a:hover,
+nav a.active {
+    color: #1b4d3e !important;
+}
+
+nav a {
+    color: #2e3a36 !important;
+}

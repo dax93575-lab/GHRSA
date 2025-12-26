@@ -1,0 +1,246 @@
+/* =================================================
+   CARE PAGE STYLES (صفحة العناية)
+================================================= */
+
+/* --- 1. HERO SECTION --- */
+/* Hero is handled by commen.css */
+
+/* --- 2. CARE GRID LAYOUT (نظام شبكة العناية) --- */
+.care-grid {
+    max-width: 1300px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.care-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 120px;
+    transition: var(--transition);
+    
+}
+
+.care-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* --- 3. IMAGES & EFFECTS (الصور والتأثيرات) --- */
+.care-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.care-image img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    transition: 1.5s ease;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 25px;
+    border-radius: 20px;
+    color: var(--green-dark);
+    font-weight: 800;
+    transform: translateY(100px);
+    transition: 0.6s;
+    opacity: 0;
+}
+
+.care-row:hover .image-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.care-row:hover .care-image img {
+    transform: scale(1.1);
+}
+
+/* --- 4. DETAILS & STATS (التفاصيل والبيانات) --- */
+.care-details {
+    flex: 1;
+}
+
+.type-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.type-icon {
+    width: 65px;
+    height: 65px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: var(--green-main);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.type-header span {
+    background: var(--green-light);
+    color: var(--green-dark);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.care-details h2 {
+    font-size: 2.8rem;
+    color: var(--green-dark);
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.care-details p {
+    font-size: 1.15rem;
+    color: #555;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+/* Stats Dashboard (لوحة المعلومات) */
+.stats-premium {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background: var(--white);
+    padding: 35px;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+    border-right: 6px solid var(--green-main);
+}
+
+.stat-item {
+    padding: 12px;
+    
+    transition: 0.3s;
+}
+
+.stat-item:hover {
+    
+    transform: translateX(-5px);
+}
+
+.stat-item strong {
+    display: block;
+    color: var(--green-main);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    
+}
+
+.stat-item span {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* --- 5. RESPONSIVE DESIGN (التجاوب) --- */
+
+/* أجهزة اللابتوب المتوسطة (1024px) */
+@media (max-width: 1024px) {
+    .care-grid {
+        max-width: 950px;
+        padding: 0 30px;
+    }
+
+    .care-row {
+        gap: 40px;
+    }
+
+    .care-image img {
+        height: 450px;
+    }
+
+    .care-details h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* التابلت (768px) */
+@media (max-width: 768px) {
+    .care-row {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 80px;
+        text-align: center;
+    }
+
+    .care-row.reverse {
+        flex-direction: column;
+    }
+
+    .care-image,
+    .care-details {
+        width: 100%;
+        flex: none;
+    }
+
+    .care-image img {
+        height: 350px;
+        border-radius: 30px;
+    }
+
+    .type-header {
+        justify-content: center;
+    }
+
+    .care-details p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .stats-premium {
+        padding: 25px;
+    }
+}
+
+/* الموبايل (480px) */
+@media (max-width: 480px) {
+    .care-grid {
+        padding: 0 20px;
+        margin: 40px auto;
+    }
+
+    .care-image img {
+        height: 280px;
+    }
+
+    .stats-premium {
+        grid-template-columns: 1fr;
+        /* عمود واحد */
+        border-right: none;
+        border-top: 5px solid var(--green-main);
+    }
+
+    .type-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .care-details h2 {
+        font-size: 2rem;
+    }
+
+    .image-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        /* إظهار دائم على الموبايل */
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
