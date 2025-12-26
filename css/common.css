@@ -24,11 +24,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-<<<<<<< HEAD
   
 
-=======
->>>>>>> b1d281b4c1397a5902ec1b800fb4420d50b6b5d0
 }
 
 html {
@@ -616,26 +613,9 @@ nav a.active::after {
   opacity: 0.15;
   font-size: 4rem;
   pointer-events: none;
-<<<<<<< HEAD
 
 }
 
-=======
-  animation: floatLeaf 8s ease-in-out infinite;
-}
-
-@keyframes floatLeaf {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-30px) rotate(20deg);
-  }
-}
->>>>>>> b1d281b4c1397a5902ec1b800fb4420d50b6b5d0
 
 /* =================================================
    10. RESPONSIVE DESIGN (التجاوب)
@@ -674,14 +654,11 @@ nav a.active::after {
   .section-title {
     font-size: 2.2rem;
   }
-<<<<<<< HEAD
 nav a {
     margin: 5px 8px;
     /* تقليل المسافات أكثر */
     font-size: 0.7rem;
   }
-=======
->>>>>>> b1d281b4c1397a5902ec1b800fb4420d50b6b5d0
 
   .hero-section {
     min-height: 60vh;
@@ -689,10 +666,7 @@ nav a {
   }
 
   .hero-section h1 {
-<<<<<<< HEAD
   
-=======
->>>>>>> b1d281b4c1397a5902ec1b800fb4420d50b6b5d0
     font-size: 2.8rem;
   }
 
@@ -746,11 +720,7 @@ nav a {
   nav a {
     margin: 5px 8px;
     /* تقليل المسافات أكثر */
-<<<<<<< HEAD
     font-size: 0.5rem;
-=======
-    font-size: 0.9rem;
->>>>>>> b1d281b4c1397a5902ec1b800fb4420d50b6b5d0
   }
 
   .btn {
