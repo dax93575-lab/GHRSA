@@ -155,20 +155,7 @@ body {
   transition: 0.3s;
 }
 
-.switch a:after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: var(--green-main);
-  transition: width 0.3s;
-}
 
-.switch a:hover:after {
-  width: 100%;
-}
 
 .switch a:hover {
   color: var(--green-dark);
