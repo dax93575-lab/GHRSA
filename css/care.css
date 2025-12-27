@@ -6,7 +6,7 @@
 /* Hero is handled by commen.css */
 
 /* --- 2. CARE GRID LAYOUT (نظام شبكة العناية) --- */
-.care-grid {
+.care-flex {
     max-width: 1300px;
     margin: 80px auto;
     padding: 0 20px;
@@ -126,12 +126,13 @@
 
 .stat-item {
     padding: 12px;
-    
+    border-bottom: 1px solid #f0f0f0;
     transition: 0.3s;
 }
 
 .stat-item:hover {
-    
+    background-color: #f0fff8;
+    border-radius: 20px;
     transform: translateX(-5px);
 }
 
@@ -153,7 +154,7 @@
 
 /* أجهزة اللابتوب المتوسطة (1024px) */
 @media (max-width: 1024px) {
-    .care-grid {
+    .care-flex{
         max-width: 950px;
         padding: 0 30px;
     }
@@ -206,41 +207,5 @@
 
     .stats-premium {
         padding: 25px;
-    }
-}
-
-/* الموبايل (480px) */
-@media (max-width: 480px) {
-    .care-grid {
-        padding: 0 20px;
-        margin: 40px auto;
-    }
-
-    .care-image img {
-        height: 280px;
-    }
-
-    .stats-premium {
-        grid-template-columns: 1fr;
-        /* عمود واحد */
-        border-right: none;
-        border-top: 5px solid var(--green-main);
-    }
-
-    .type-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .care-details h2 {
-        font-size: 2rem;
-    }
-
-    .image-overlay {
-        opacity: 1;
-        transform: translateY(0);
-        /* إظهار دائم على الموبايل */
-        padding: 8px 20px;
-        font-size: 0.9rem;
     }
 }
