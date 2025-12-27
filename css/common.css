@@ -71,8 +71,6 @@ a {
   border-radius: 18px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
   z-index: 1000;
-  transition: top 0.3s ease;
-  /* حركة عند السكرول */
 }
 
 .header-content {
@@ -119,7 +117,6 @@ nav a::before,
 nav a::after {
   content: '🌿';
   position: absolute;
-  color: var(--green-main);
   font-size: 0.8rem;
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -238,9 +235,20 @@ nav a.active::after {
   position: relative;
   z-index: 2;
   max-width: 1000px;
-  
+  animation: heroFadeUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 
 .hero-section h1 {
   font-size: 5rem;
@@ -253,8 +261,7 @@ nav a.active::after {
 
 .hero-section p {
   font-size: 1.6rem;
-  /* Increased from 1.4rem */
-  opacity: 0.98;
+
   max-width: 800px;
   margin: 0 auto;
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
@@ -262,9 +269,9 @@ nav a.active::after {
 }
 
 .hero-glass-card {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 40px;
-  /* More rounded */
+  backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
   padding: 70px 50px;
@@ -281,7 +288,7 @@ nav a.active::after {
 ================================================= */
 .search-section {
   padding: 40px 0;
-  margin-top: -40px;
+
   position: relative;
   z-index: 10;
   display: flex;
@@ -420,7 +427,7 @@ nav a.active::after {
   font-size: 1.8rem;
   margin-bottom: 15px;
 }
-
+ 
 .flip-card-back p {
   font-size: 1rem;
   margin-bottom: 25px;
@@ -437,16 +444,7 @@ nav a.active::after {
 }
 
 /* Mobile Visibility Handling */
-.mobile-card-btn {
-  display: none;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: var(--green-dark);
-  color: white;
-  border-radius: 12px;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
+
 
 /* =================================================
    8. UNIFIED FOOTER (الفوتر الموحّد)
@@ -501,7 +499,7 @@ nav a.active::after {
 
 .social-icons a:hover {
   color: var(--green-light);
-  transform: translateY(-5px) scale(1.2);
+  transform: translateX(-5px) scale(1.2);
 }
 
 .copyright {
@@ -595,7 +593,6 @@ nav a.active::after {
 
 .card-info p {
   font-size: 1.1rem;
-  opacity: 1;
   line-height: 1.7;
   color: #555;
   margin-top: 15px;
@@ -616,24 +613,11 @@ nav a.active::after {
 
 }
 
-
 /* =================================================
    10. RESPONSIVE DESIGN (التجاوب)
 ================================================= */
 
-@media (max-width: 992px) {
 
-  /* General Layout */
-  .footer-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
-
-  .timeline-item:nth-child(odd) .content-card,
-  .timeline-item:nth-child(even) .content-card {
-    transform: translateX(0);
-    width: 85%;
-  }
-}
 
 @media (max-width: 768px) {
 
@@ -645,19 +629,15 @@ nav a.active::after {
     /* إضافة مسافات بين العناصر عند الالتفاف */
   }
 
-  /*
-   * ملاحظة: تم حذف `nav { display: none; }`
-   * هذا الكود كان السبب في إخفاء القائمة. الآن، ستلتف الروابط إلى سطر جديد إذا لم يكن هناك مساحة كافية.
-   */
+  nav a {
+    margin: 5px 8px;
+    /* تقليل المسافات أكثر */
+    font-size: 0.9rem;
+  }
 
   /* General font sizes and adjustments */
   .section-title {
     font-size: 2.2rem;
-  }
-nav a {
-    margin: 5px 8px;
-    /* تقليل المسافات أكثر */
-    font-size: 0.7rem;
   }
 
   .hero-section {
@@ -666,7 +646,6 @@ nav a {
   }
 
   .hero-section h1 {
-  
     font-size: 2.8rem;
   }
 
@@ -683,28 +662,7 @@ nav a {
     height: 350px;
   }
 
-  .flip-card:hover .flip-card-inner {
-    transform: none;
-  }
-
-  .mobile-card-btn {
-    display: inline-block;
-  }
-
-  /* Make the entire front card clickable on mobile */
-  .flip-card-front {
-    position: relative;
-  }
-
-  .mobile-card-btn::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-  }
+  
 
   .search-wrapper {
     width: 90%;
