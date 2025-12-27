@@ -274,6 +274,25 @@ const plantsData = {
         soil: 65, soilText: "خفيفة", soilNote: "تصريف جيد",
         fert: 20, fertText: "خفيف", fertNote: "كل 3 أشهر"
     },
+      "البوتس": {
+    latin: "Epipremnum aureum",
+    image: "images/shade_البوتس.png",
+    description: "البوتس من أفضل نباتات الظل على الإطلاق، يتحمل الإضاءة الضعيفة وينمو بشكل جيد في المنازل والمكاتب. يتميز بسهولة العناية وسرعة نموه حتى في ظروف الضوء الخافت.",
+    sun: 35, sunText: "ظليلة", sunNote: "ضوء غير مباشر أو خافت",
+    water: 40, waterText: "متوسطة", waterNote: "عند جفاف سطح التربة",
+    soil: 65, soilText: "عادية", soilNote: "جيدة التصريف",
+    fert: 25, fertText: "خفيف", fertNote: "كل شهرين"
+    },
+    "الفيكس المطاطي": {
+    latin: "Ficus elastica",
+    image: "images/shade_rubber_plant.png",
+    description: "الفيكس المطاطي يمكنه العيش كنبات ظل جزئي، خاصة في الأماكن ذات الإضاءة غير المباشرة. نبات قوي وأنيق، مناسب للمكاتب والغرف الواسعة قليلة الإضاءة.",
+    sun: 40, sunText: "ظليلة", sunNote: "ضوء ساطع غير مباشر",
+    water: 40, waterText: "متوسطة", waterNote: "ري معتدل دون إفراط",
+    soil: 70, soilText: "عادية", soilNote: "جيدة التصريف",
+    fert: 30, fertText: "خفيف", fertNote: "كل شهرين"
+    },
+
 
     // ================== FRUIT TREES ==================
     "الزيتون": {
