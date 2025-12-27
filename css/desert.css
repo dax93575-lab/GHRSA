@@ -1,8 +1,7 @@
 /* =================================================
    DESERT PAGE THEME (النباتات الصحراوية)
 ================================================= */
-@import url('../home.css');
-/* Import base styles */
+
 
 /* =================================================
    HERO SECTION
@@ -37,23 +36,6 @@
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .desert-hero-content {
-        justify-content: center;
-    }
-
-    .desert-text {
-        width: 100%;
-        text-align: center;
-        border-right: none;
-        border-bottom: 5px solid white;
-    }
-
-    .desert-text h1 {
-        font-size: 2.5rem;
-    }
-}
 
 /* --- 3. FOOTER THEME (تخصيص الفوتر للمظهر الصحراوي) --- */
 .footer {
