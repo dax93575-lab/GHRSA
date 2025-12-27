@@ -1,209 +1,95 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+/* =================================================
+   FRUIT PAGE THEME (النباتات المثمرة)
+================================================= */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>النباتات المثمرة - غرسة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/fruit.css">
-        <link rel="icon" href="images/leaf.ico" type="image/x-icon">
+/* --- 1. SEARCH SECTION OVERRIDES (تخصيص البحث) --- */
+.search-wrapper {
+    box-shadow: 0 10px 30px rgba(230, 81, 0, 0.15);
+}
 
-</head>
+.search-box input {
+    color: #e65100;
+}
 
-<body>
-    <header class="main-header">
-        <div class="container header-content">
-            <a href="index.html" class="logo"><i class="fas fa-leaf"></i> <span>غرسة</span></a>
-            <nav>
-                <a href="index.html">الرئيسية</a>
-                <a href="plantType.html">أنواع النباتات</a>
-                <a href="care.html">العناية</a>
-                <a href="index.html#about">من نحن</a>
-            </nav>
-        </div>
-    </header>
+.search-box button {
+    background: #ef6c00;
+}
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero-section" style="background-image: url('images/fruit_veggies.png');">
-        <div class="hero-overlay" style="background: linear-gradient(rgba(230, 81, 0, 0.7), rgba(230, 81, 0, 0.4));">
-        </div>
-        <div class="hero-container" data-aos="fade-up">
-            <div class="hero-glass-card">
-                <h1>النباتات المثمرة</h1>
-                <p>من خيرات الطبيعة إلى مائدتك مباشرة.</p>
-            </div>
-        </div>
-    </section>
+.search-box button:hover {
+    background: #e65100;
+}
 
-    <div class="search-section">
-        <div class="search-wrapper">
-            <div class="search-box">
-                <input type="text" id="plantSearch" placeholder="ابحث عن اسم النبات..." onkeyup="filterPlants()">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-        </div>
-    </div>
+/* --- 2. FLIP CARDS THEME (تخصيص البطاقات) --- */
+.fruit-cards {
+    padding: 80px 0;
+}
 
-    <section class="fruit-cards">
-        <div class="container">
-            <h2 class="section-title">حصاد الخير</h2>
-            <div class="flip-grid" id="plantsGrid">
+.front-content {
+    background: linear-gradient(to top, rgba(230, 81, 0, 0.8), transparent);
+}
 
-                <!-- Card 1: الزيتون -->
-                <div class="flip-card" data-name="الزيتون">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/fruit_الزيتون.png" alt="الزيتون">
-                            <div class="front-content">
-                                <h3>الزيتون</h3>
-                               
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>الزيتون</h3>
-                            <p>شجرة معمرة مباركة تتحمل الجفاف.</p>
-                            <a href="fruit-details.html?plant=الزيتون" class="card-btn">تفاصيل أكثر</a>
-                        </div>
-                    </div>
-                </div>
+.flip-card-back {
+    background: linear-gradient(135deg, #ffe0b2, #ffb74d);
+    color: #e65100;
+    border: 2px solid #ffb74d;
+}
 
-                <!-- Card 2: النخيل -->
-                <div class="flip-card" data-name="النخيل">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/fruit_النخيل.png" alt="النخيل">
-                            <div class="front-content">
-                                <h3>النخيل</h3>
-                               
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>النخيل</h3>
-                            <p>شجرة مثمرة تتحمل الحرارة والملوحة.</p>
-                            <a href="fruit-details.html?plant=النخيل" class="card-btn">تفاصيل أكثر</a>
-                        </div>
-                    </div>
-                </div>
+.flip-card-back h3 {
+    color: #e65100;
+}
 
-                <!-- Card 3: التين -->
-                <div class="flip-card" data-name="التين">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/fruit_التين.png" alt="التين">
-                            <div class="front-content">
-                                <h3>التين</h3>
-                               
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>التين</h3>
-                            <p>شجرة مثمرة سريعة النمو بظلال وفيرة.</p>
-                            <a href="fruit-details.html?plant=التين" class="card-btn">تفاصيل أكثر</a>
-                        </div>
-                    </div>
-                </div>
+.card-btn {
+    background: #e65100;
+}
 
-                <!-- Card 4: الرمان -->
-                <div class="flip-card" data-name="الرمان">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/fruit_الرمان.png" alt="الرمان">
-                            <div class="front-content">
-                                <h3>الرمان</h3>
-                               
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>الرمان</h3>
-                            <p>شجرة مثمرة صيفية بزهور حمراء خلابة.</p>
-                            <a href="fruit-details.html?plant=الرمان" class="card-btn">تفاصيل أكثر</a>
-                        </div>
-                    </div>
-                </div>
+.card-btn:hover {
+    background: #bf360c;
+}
 
-                <!-- Card 5: الليمون -->
-                <div class="flip-card" data-name="الليمون">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/fruit_الليمون.png" alt="الليمون">
-                            <div class="front-content">
-                                <h3>الليمون</h3>
-                               
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>الليمون</h3>
-                            <p>شجرة مثمرة دائمة الخضرة بزهور عطرية.</p>
-                            <a href="fruit-details.html?plant=الليمون" class="card-btn">تفاصيل أكثر</a>
-                        </div>
-                    </div>
-                </div>
+/* --- 3. FOOTER THEME (تخصيص الفوتر للمظهر الثمري) --- */
+.footer {
+    background: linear-gradient(135deg, #ef6c00, #bf360c) !important;
+    border-top: 4px solid #ffb74d;
+}
 
-                <!-- Card 6: العنب -->
-                <div class="flip-card" data-name="العنب">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <img src="images/fruit_العنب.png" alt="العنب">
-                            <div class="front-content">
-                                <h3>العنب</h3>
-                               
-                            </div>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>العنب</h3>
-                            <p>نبات متسلق مثمر بظلال واسعة.</p>
-                            <a href="fruit-details.html?plant=العنب" class="card-btn">تفاصيل أكثر</a>
-                        </div>
-                    </div>
-                </div>
+.footer-col a:hover,
+.contact-list i,
+.social-icons a:hover {
+    color: #fff3e0 !important;
+    /* Light orange color */
+}
 
-            </div>
-        </div>
-    </section>
+/* --- 4. THEME VARIABLES (متغيرات المظهر) --- */
+:root {
+    --green-dark: #bf360c;
+    /* Dark Orange/Red */
+    --green-main: #ef6c00;
+    /* Main Orange */
 
-    <script>
-        function filterPlants() {
-            let input = document.getElementById('plantSearch');
-            let filter = input.value.toUpperCase();
-            let grid = document.getElementById('plantsGrid');
-            let cards = grid.getElementsByClassName('flip-card');
-            for (let i = 0; i < cards.length; i++) {
-                let name = cards[i].getAttribute('data-name');
-                if (name.toUpperCase().indexOf(filter) > -1) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-    <footer class="footer" id="footer">
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <h3>غرسة</h3>
-                <p>موقع عربي يهدف لنشر المعرفة حول عالم النباتات.</p>
-                <p class="copyright">© 2025 غرسة. جميع الحقوق محفوظة.</p>
-            </div>
-            <div class="footer-col">
-                <h3>تواصل معنا</h3>
-                <ul class="contact-list">
-                    <li><i class="fas fa-envelope"></i> gharsa@gmail.com</li>
-                    <li><i class="fas fa-phone"></i> +218 (92-1) 123_456</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>تابعنا</h3>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
+    --card-back-bg: linear-gradient(135deg, #ffe0b2, #ffb74d);
+    --card-text: #e65100;
+    --card-border: #ffb74d;
+    --card-btn-bg: #e65100;
+    --card-btn-hover: #f57c00;
+}
 
-</html>
+.plant-title-section h1,
+.plant-requirements h2,
+.plant-description h2 {
+    color: var(--green-dark);
+}
+
+.req-label i {
+    color: var(--green-main);
+}
+
+/* Standardize Header */
+.logo,
+nav a:hover,
+nav a.active {
+    color: #ef6c00 !important;
+}
+
+nav a {
+    color: #2e3a36 !important;
+}
